@@ -91,7 +91,7 @@ function getStores($k) {
   $results = array();
 
   foreach ($list as $e) {
-    if (strpos(strtolower($e), strtolower($k)) !== false) { $results[] = htmlspecialchars_decode($e); }
+    if (strpos(strtolower($e), strtolower($k)) !== false) { $results[] = ["name" => htmlspecialchars_decode($e)]; }
   }
   
   return $results;

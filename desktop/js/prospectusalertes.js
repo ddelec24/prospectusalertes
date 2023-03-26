@@ -257,7 +257,7 @@ function printEqLogic(_eqLogic) {
   	if(typeof eqLogicCmdNotif === "string") {
       addAction({}, _type);
       $(".eqLogicAttr[data-l1key=configuration][data-l2key=cmdNotif]").last().val(eqLogicCmdNotif);
-      console.log(eqLogicCmdNotif);
+      //console.log(eqLogicCmdNotif);
       
     } else if (typeof eqLogicCmdNotif === "object") {
       $(eqLogicCmdNotif).each(function(i) { 
@@ -268,3 +268,22 @@ function printEqLogic(_eqLogic) {
     }
   
 }
+
+$('.flexdatalist').flexdatalist({
+  searchDelay: 300,
+  //selectionRequired: true,
+  requestType: "post",
+  noResultsText: "{{Aucun résultat, veuillez vérifier votre saisie.}}",
+  minLength: 1,
+  multiple: "multiple",
+  keywordParamName: "term",
+  removeOnBackspace: true,
+  resultsProperty: "result",
+  searchIn: "name",
+  searchContain: true,
+  url: "plugins/prospectusalertes/core/ajax/prospectusalertes.ajax.php",
+  params: {
+		"action": "getStores"
+  },
+  valuesSeparator: ", "
+});

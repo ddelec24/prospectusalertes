@@ -145,12 +145,11 @@ $eqLogics = eqLogic::byType($plugin->getId());
 									<sup><i class="fas fa-question-circle tooltips" title="{{Choisissez la ou les enseignes qui vous intéressent}}"></i></sup>
 								</label>
 								<div class="col-sm-6">
-									<!-- <input type="text" class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="stores" placeholder="{{Choisir par un click dans la liste*}}"> -->
-                                    <textarea class="eqLogicAttr form-control autogrow" data-l1key="configuration" data-l2key="stores" placeholder="{{Choisir par un click dans la liste*}}"></textarea>
+                                    <input type="text" class="eqLogicAttr form-control flexdatalist" data-l1key="configuration" data-l2key="stores" />
 								</div>
 								<label class="col-sm-4 control-label"></label>
                                 <div class="col-sm-6">
-                                	Saisissez une partie du nom de l'enseigne et cliquez pour valider votre choix, qui s'ajoutera dans la zone de texte.
+                                	Saisissez une partie du nom de l'enseigne et cliquez sur le résultat souhaité pour valider votre choix.
                                 </div>
 							</div>
                             
@@ -218,7 +217,13 @@ $eqLogics = eqLogic::byType($plugin->getId());
 	</div><!-- /.eqLogic -->
 </div><!-- /.row row-overflow -->
 
+<style>
+.flexdatalist-results{position:absolute;top:0;left:0;border:1px solid #444;border-top:none;background:#fff;z-index:100000;max-height:300px;overflow-y:auto;box-shadow:0 4px 5px rgba(0,0,0,0.15);color:#333;list-style:none;margin:0;padding:0}.flexdatalist-results li{border-bottom:1px solid #ccc;padding:8px 15px;font-size:14px;line-height:20px}.flexdatalist-results li span.highlight{font-weight:700;text-decoration:underline}.flexdatalist-results li.active{background:#2B82C9;color:#fff;cursor:pointer}.flexdatalist-results li.no-results{font-style:italic;color:#888}.flexdatalist-results li.group{background:#F3F3F4;color:#666;padding:8px 8px}.flexdatalist-results li .group-name{font-weight:700}.flexdatalist-results li .group-item-count{font-size:85%;color:#777;display:inline-block;padding-left:10px}.flexdatalist-multiple:before{content:'';display:block;clear:both}.flexdatalist-multiple{width:100%;margin:0;padding:0;list-style:none;text-align:left;cursor:text}.flexdatalist-multiple.disabled{background-color:#eee;cursor:default}.flexdatalist-multiple:after{content:'';display:block;clear:both}.flexdatalist-multiple li{display:inline-block;position:relative;margin:5px}.flexdatalist-multiple li.input-container,.flexdatalist-multiple li.input-container input{border:none;height:auto;padding:0 0 0 4px;line-height:24px}.flexdatalist-multiple li.value{display:inline-block;padding:2px 25px 2px 7px;background:#efefef;border-radius:3px;color:#444;line-height:20px;float:left}.flexdatalist-multiple li.toggle{cursor:pointer;transition:opacity ease-in-out 300ms}.flexdatalist-multiple li.toggle.disabled{text-decoration:line-through;opacity:0.80}.flexdatalist-multiple li.value span.fdl-remove{font-weight:700;padding:2px 5px;font-size:20px;line-height:20px;cursor:pointer;position:absolute;top:0;right:0;opacity:0.70}.flexdatalist-multiple li.value span.fdl-remove:hover{opacity:1}
+</style>
+
 <!-- Inclusion du fichier javascript du plugin (dossier, nom_du_fichier, extension_du_fichier, id_du_plugin) -->
+<?php include_file('desktop', 'flexdatalist', 'js', 'prospectusalertes');?>
 <?php include_file('desktop', 'prospectusalertes', 'js', 'prospectusalertes');?>
+
 <!-- Inclusion du fichier javascript du core - NE PAS MODIFIER NI SUPPRIMER -->
 <?php include_file('core', 'plugin.template', 'js');?>
