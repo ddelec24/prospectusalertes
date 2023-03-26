@@ -1,0 +1,42 @@
+{
+	"id" : "prospectusalertes",
+	"name" : "Alertes Prospectus",
+	"description" : {
+		"fr_FR": "Plugin permettant d'être alerté lors de la disponibilité d'un nouveau prospectus pour la ou les enseignes choisies. (Y compris les prospectus locaux)"
+	},
+	"licence" : "AGPL",
+	"author" : "Jeedom SAS",
+	"require" : "4.2.0",
+	"category" : "organization",
+	"hasDependency" : false,
+	"hasOwnDeamon" : false,
+	"maxDependancyInstallTime" : 0,
+	"changelog" : "https://ddelec24.github.io/docs-jeedom/prospectusalertes/#language#/changelog",
+	"documentation" : "https://ddelec24.github.io/docs-jeedom/prospectusalertes/#language#/",
+	"changelog_beta" : "https://ddelec24.github.io/docs-jeedom/prospectusalertes/#language#/beta/changelog",
+	"documentation_beta" : "https://ddelec24.github.io/docs-jeedom/prospectusalertes/#language#/beta/",
+	"link" : {
+		"forum":"https://community.jeedom.com"
+	},
+	"language": [
+		"fr_FR",
+		"en_US",
+		"es_ES",
+		"de_DE",
+		"ru_RU",
+		"id_ID",
+		"it_IT",
+		"ja_JP",
+		"pt_PT"
+	],
+	"compatibility": [
+		"miniplus",
+		"smart",
+		"rpi",
+		"docker",
+		"diy",
+		"mobile",
+		"v4",
+		"atlas"
+	]
+}
